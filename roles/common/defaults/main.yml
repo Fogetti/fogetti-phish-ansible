@@ -1,0 +1,13 @@
+jar_dir: /var/lib/jenkins/jobs/phishstorm-build/workspace/target
+src_dir: /var/lib/jenkins/jobs/phishstorm-ansible/workspace/input
+root_dir: /home/fogetti
+storm_dir: "{{ root_dir }}/downloads/apache-storm-0.10.0"
+bin_dir: "{{ storm_dir }}/bin"
+lib_dir: "{{ storm_dir }}/lib"
+conf_dir: "{{ storm_dir }}/conf"
+logs_dir: "{{ storm_dir }}/logs"
+input_dir: "{{ storm_dir }}/input"
+
+# Storm app general config
+storm_binary: "{{ bin_dir }}/storm"
+topology_jar: "{{ bin_dir }}/{{ jar_file }}"

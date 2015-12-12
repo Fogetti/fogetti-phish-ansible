@@ -1,0 +1,11 @@
+[dev_nimbus_servers]
+dimebag
+
+[dev_nimbus_servers:vars]
+jar_file=fogetti-phish-storm-0.0.1-SNAPSHOT.jar
+main_class=fogetti.phish.storm.integration.PhishTopologyRemoteRunner
+google_uname=alma
+google_pword=alma
+count_data_file=/var/lib/jenkins/jobs/phishstorm-ansible/workspace/input/1gram-count.txt
+ps_data_file=/var/lib/jenkins/jobs/phishstorm-ansible/workspace/input/public-suffix-list.dat
+url_data_file=/var/lib/jenkins/jobs/phishstorm-ansible/workspace/input/url-list.txt
