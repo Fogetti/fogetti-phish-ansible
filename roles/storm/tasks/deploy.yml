@@ -2,17 +2,27 @@
 
 - name: ensure input folder exists
   file: path={{ input_dir }} state=directory
+  become: yes
+  become_user: fogetti
 
 - name: copy the count/ps/url data file to the target server
   copy: src={{ src_dir }} dest={{ input_dir }} owner=fogetti group=fogetti backup=yes
+  become: yes
+  become_user: fogetti
 
 - name: copy the jar file to the target server
   copy: src={{ jar_dir }}/{{ jar_file }} dest={{ topology_jar }} owner=fogetti group=fogetti backup=yes
+  become: yes
+  become_user: fogetti
 
 - name: generate storm env ini
   template: src=storm_env.ini.j2 dest={{ conf_dir }}/storm_env.ini
+  become: yes
+  become_user: fogetti
 
 - name: start the topology
   command: sh {{ storm_binary }} jar {{ topology_jar }} {{ main_class }}
   environment:
     JAVA_HOME: /usr
+  become: yes
+  become_user: fogetti
