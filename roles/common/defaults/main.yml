@@ -1,5 +1,5 @@
-jar_dir: /var/lib/jenkins/jobs/phishstorm-build/workspace/target
-src_dir: /var/lib/jenkins/jobs/phishstorm-ansible/workspace/input
+jar_dir: /var/lib/jenkins/workspace/phishstorm-build/target
+src_dir: /var/lib/jenkins/workspace/phishstorm-deploy/input
 root_dir: /home/fogetti
 storm_dir: "{{ root_dir }}/downloads/apache-storm-0.10.0"
 bin_dir: "{{ storm_dir }}/bin"
