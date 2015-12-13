@@ -6,7 +6,8 @@ bin_dir: "{{ storm_dir }}/bin"
 lib_dir: "{{ storm_dir }}/lib"
 conf_dir: "{{ storm_dir }}/conf"
 logs_dir: "{{ storm_dir }}/logs"
-input_dir: "{{ storm_dir }}/input"
+nfs_dir: "/mnt/gilbertnfs"
+input_dir: "{{ nfs_dir }}/input"
 
 # Storm app general config
 storm_binary: "{{ bin_dir }}/storm"
