@@ -18,7 +18,7 @@
 
 - name: kill the topology
   command: sh {{ storm_binary }} kill {{ topology_name }}
-  when: last(list_toplogies.stdout_lines) != "No topologies running."
+  when: {{ list_toplogies.stdout_lines | last }} != "No topologies running."
 
 - name: start the topology
   command: sh {{ storm_binary }} jar {{ topology_jar }} {{ main_class }}
