@@ -12,8 +12,13 @@
 - name: generate storm env ini
   template: src=storm_env.ini.j2 dest={{ conf_dir }}/storm_env.ini
 
+- name: list all topologies
+  command: sh {{ storm_binary }} list
+  register: list_toplogies
+
 - name: kill the topology
   command: sh {{ storm_binary }} kill {{ topology_name }}
+  when: list_toplogies.stdout != "No topologies running."
 
 - name: start the topology
   command: sh {{ storm_binary }} jar {{ topology_jar }} {{ main_class }}
