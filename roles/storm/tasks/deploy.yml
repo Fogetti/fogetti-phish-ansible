@@ -13,14 +13,14 @@
   template: src=storm_env.ini.j2 dest={{ conf_dir }}/storm_env.ini
 
 - name: list all topologies
-  command: sh {{ storm_binary }} list
+  command: "{{ storm_binary }} list"
   register: list_toplogies
 
 - name: kill the topology
-  command: {{ storm_binary }} kill {{ topology_name }}
+  command: "{{ storm_binary }} kill {{ topology_name }}"
   when: list_toplogies.stdout_lines|last != "No topologies running."
 
 - name: start the topology
-  command: {{ storm_binary }} jar {{ topology_jar }} {{ main_class }}
+  command: "{{ storm_binary }} jar {{ topology_jar }} {{ main_class }}"
   environment:
     JAVA_HOME: /usr
