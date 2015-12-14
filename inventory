@@ -4,6 +4,7 @@ dimebag
 [dev_nimbus_servers:vars]
 jar_file=fogetti-phish-storm-0.0.1-SNAPSHOT.jar
 main_class=fogetti.phish.storm.integration.PhishTopologyRemoteRunner
+topology_name=phish-storm-topology
 google_uname=alma
 google_pword=alma
 count_data_file=/mnt/gilbertnfs/input/1gram-count.txt

@@ -12,6 +12,9 @@
 - name: generate storm env ini
   template: src=storm_env.ini.j2 dest={{ conf_dir }}/storm_env.ini
 
+- name: kill the topology
+  command: sh {{ storm_binary }} kill {{ topology_name }}
+
 - name: start the topology
   command: sh {{ storm_binary }} jar {{ topology_jar }} {{ main_class }}
   environment:
