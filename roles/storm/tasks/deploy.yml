@@ -3,7 +3,7 @@
 - name: ensure input folder exists
   file: path={{ input_dir }} state=directory
 
-- name: copy the count/ps/url data file to the target server
+- name: copy the count/ps/url/proxy data file to the target server
   copy: src={{ src_dir }} dest={{ nfs_dir }} owner=fogetti group=fogetti backup=yes
 
 - name: copy the jar file to the target server

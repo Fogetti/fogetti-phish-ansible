@@ -10,3 +10,4 @@ google_pword=alma
 count_data_file=/mnt/gilbertnfs/input/1gram-count.txt
 ps_data_file=/mnt/gilbertnfs/input/public-suffix-list.dat
 url_data_file=/mnt/gilbertnfs/input/url-list.txt
+proxy_data_file=/mnt/gilbertnfs/input/working-proxies.txt
