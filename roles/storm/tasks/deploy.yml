@@ -22,5 +22,6 @@
 
 - name: start the topology
   command: "{{ storm_binary }} jar {{ topology_jar }} {{ main_class }}"
+  retries: 2
   environment:
     JAVA_HOME: /usr
