@@ -22,6 +22,8 @@
 
 - name: start the topology
   command: "{{ storm_binary }} jar {{ topology_jar }} {{ main_class }}"
-  retries: 2
+  register: start_topology
+  until: start_topology.stdout.find("RuntimeException") == -1
+  retries: 3
   environment:
     JAVA_HOME: /usr
