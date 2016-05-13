@@ -1,7 +1,8 @@
 jar_dir: /var/lib/jenkins/workspace/phishstorm-build/target
 src_dir: /var/lib/jenkins/workspace/phishstorm-deploy/input
 root_dir: /home/fogetti
-storm_dir: "{{ root_dir }}/downloads/apache-storm-0.10.0"
+storm_version: "1.0.1"
+storm_dir: "{{ root_dir }}/downloads/apache-storm-{{ storm_version }}"
 bin_dir: "{{ storm_dir }}/bin"
 lib_dir: "{{ storm_dir }}/lib"
 conf_dir: "{{ storm_dir }}/conf"
