@@ -3,6 +3,9 @@
 - name: ensure input folder exists
   file: path={{ input_dir }} state=directory
 
+- name: ensure output folder exists
+  file: path={{ output_dir }} state=directory
+
 - name: copy the count/ps/url/proxy data file to the target server
   copy: src={{ src_dir }} dest={{ nfs_dir }}/input owner=fogetti group=fogetti backup=yes
 

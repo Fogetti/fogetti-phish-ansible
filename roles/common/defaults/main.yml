@@ -9,6 +9,7 @@ conf_dir: "{{ storm_dir }}/conf"
 logs_dir: "{{ storm_dir }}/logs"
 nfs_dir: "/mnt/gilbertnfs"
 input_dir: "{{ nfs_dir }}/input/phish-storm"
+output_dir: "{{ nfs_dir }}/output/phish-storm"
 
 # Storm app general config
 storm_binary: "{{ bin_dir }}/storm"
