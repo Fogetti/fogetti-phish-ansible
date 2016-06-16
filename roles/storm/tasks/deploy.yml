@@ -18,7 +18,8 @@
 
 - name: kill the topology
   command: "{{ storm_binary }} kill {{ topology_name }}"
-  when: list_toplogies.stdout_lines|last != "No topologies running."
+  when: (list_toplogies.stdout_lines|last != "No topologies running.") and
+        (list_toplogies.stdout_lines|last.find('phish-storm') != -1)
 
 - name: start the topology
   command: "{{ storm_binary }} jar {{ topology_jar }} {{ main_class }}"
