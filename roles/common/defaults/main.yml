@@ -1,5 +1,5 @@
 jar_dir: /var/lib/jenkins/workspace/phishstorm-build/target
-src_dir: /var/lib/jenkins/workspace/phishstorm-deploy/input
+src_dir: /var/lib/jenkins/workspace/phishstorm-deploy/phish-storm
 root_dir: /home/fogetti
 storm_version: "1.0.1"
 storm_dir: "{{ root_dir }}/downloads/apache-storm-{{ storm_version }}"
@@ -8,7 +8,7 @@ lib_dir: "{{ storm_dir }}/lib"
 conf_dir: "{{ storm_dir }}/conf"
 logs_dir: "{{ storm_dir }}/logs"
 nfs_dir: "/mnt/gilbertnfs"
-input_dir: "{{ nfs_dir }}/input"
+input_dir: "{{ nfs_dir }}/input/phish-storm"
 
 # Storm app general config
 storm_binary: "{{ bin_dir }}/storm"

@@ -4,11 +4,9 @@ dimebag
 [dev_nimbus_servers:vars]
 jar_file=fogetti-phish-storm-0.0.1-SNAPSHOT.jar
 main_class=fogetti.phish.storm.integration.PhishTopologyRemoteRunner
-topology_name=phish-storm-topology
-google_uname=alma
-google_pword=alma
-count_data_file=/mnt/gilbertnfs/input/1gram-count.txt
-ps_data_file=/mnt/gilbertnfs/input/public-suffix-list.dat
-url_data_file=/mnt/gilbertnfs/input/url-list.txt
-proxy_data_file=/mnt/gilbertnfs/input/working-proxies.txt
-result_data_file=/mnt/gilbertnfs/output/phishing-result.csv
+topology_name=phish-storm
+count_data_file=/mnt/gilbertnfs/input/phish-storm/1gram-count.txt
+ps_data_file=/mnt/gilbertnfs/input/phish-storm/public-suffix-list.dat
+url_data_file=/mnt/gilbertnfs/input/phish-storm/url-list.txt
+proxy_data_file=/mnt/gilbertnfs/input/phish-storm/working-proxies.txt
+result_data_file=/mnt/gilbertnfs/output/phish-storm/phishing-result.csv
