@@ -25,7 +25,7 @@
         (list_toplogies.stdout.find('phish-storm') != -1)
 
 - name: start the topology
-  command: "{{ storm_binary }} jar {{ topology_jar }} {{ main_class }}"
+  command: "{{ storm_binary }} jar {{ topology_jar }} {{ main_class }} {{ awis_access_key }} {{ awis_secret_key }}"
   register: start_topology
   until: start_topology.stdout.find("RuntimeException") == -1
   retries: 3
